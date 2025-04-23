@@ -1,0 +1,9 @@
+.app {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+.main {
+  flex: 1;
+  margin-right: 16px;
+}

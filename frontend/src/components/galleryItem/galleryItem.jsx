@@ -1,5 +1,5 @@
 import "./galleryItem.css";
-
+import { Link } from "react-router";
 const GalleryItem = ({ item }) => {
   return (
     <div
@@ -14,6 +14,16 @@ const GalleryItem = ({ item }) => {
       style={{ gridRowEnd: `span ${Math.ceil(item.height / 100)}` }}
     >
       <img src={item.media} alt={`Image ${item.id}`} />
+      <Link to={`/pins/${item.id}`} className="overlay"></Link>
+      <button className="saveButton">save</button>
+      <div className="overlayIcons">
+        <button>
+          <img src="/plipli/share.svg" alt="" />
+        </button>
+        <button>
+          <img src="/plipli/more.svg" alt="" />
+        </button>
+      </div>
     </div>
   );
 };
